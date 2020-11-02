@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "spangnetes-38e5"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "spangnetes-38e5"
+  template:
+    metadata:
+      labels:
+        app: "spangnetes-38e5"
+    spec:
+      containers:
+        - name: "spangnetes-38e5"
+          image: "spangnetes.azurecr.io/spangnetes"
+          ports:
+          - containerPort: 8080
